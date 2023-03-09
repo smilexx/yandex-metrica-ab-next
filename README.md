@@ -1,4 +1,6 @@
-# yandex-metrica-ab-react
+# yandex-metrica-ab-next
+
+# Форк библиотеки [yandex-metrica-ab-react](https://github.com/Firnis/yandex-metrica-ab-react) для работы с ISR NextJS
 
 React библиотека для работы с AB экспериментами Метрики
 
@@ -8,7 +10,7 @@ https://varioqub.ru/
 ## Инструкция:
 ### Hook
 ```
-import { useExperiments } from 'yandex-metrica-ab-react';
+import { useExperiments } from 'yandex-metrica-ab-next';
 
 const ButtonRenderAfterFlags: React.FC = (props) => {
     const { flags, ready } = useExperiments({
@@ -31,7 +33,7 @@ export const App: React.FC = () => (
 
 ### Provider
 ```
-import { MetricaExperimentsProvider, MetricaExperimentsContext } from 'yandex-metrica-ab-react';
+import { MetricaExperimentsProvider, MetricaExperimentsContext } from 'yandex-metrica-ab-next';
 
 interface ConsumerButtonProps {
     color?: string;
@@ -53,7 +55,7 @@ export const App: React.FC = () => (
 
 ### Provider + hook
 ```
-import { MetricaExperimentsProvider, MetricaExperimentsContext } from 'yandex-metrica-ab-react';
+import { MetricaExperimentsProvider, MetricaExperimentsContext } from 'yandex-metrica-ab-next';
 
 const OtherButton: React.FC = props => {
     const { flags, ready } = useExperimentsContext();
@@ -73,7 +75,7 @@ export const App: React.FC = () => (
 
 ### ClassComponent
 ```
-import { MetricaExperimentsProvider, MetricaExperimentsContext } from 'yandex-metrica-ab-react';
+import { MetricaExperimentsProvider, MetricaExperimentsContext } from 'yandex-metrica-ab-next';
 
 class ClassButton extends React.Component {
     static contextType = MetricaExperimentsContext;
