@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createSnippet } from './createSnippet';
 import { Answer, NoAnswer } from './types';
 
 export interface UseExperiments {
@@ -13,6 +14,8 @@ export const useExperiments = (params: UseExperiments) => {
     const [data, setData] = useState<Answer | NoAnswer>({ ready: false, flags: {} });
 
     useEffect(() => {
+        createSnippet();
+
         window.ymab(clientId, "init", param, clientFeatures, (data) => {
             setData({
                 ...data,

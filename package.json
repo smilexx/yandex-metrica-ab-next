@@ -1,14 +1,14 @@
 {
-  "name": "yandex-metrica-ab-react",
+  "name": "yandex-metrica-ab-next",
   "version": "1.1.2",
   "description": "",
-  "homepage": "https://github.com/Firnis/yandex-metrica-ab-react",
+  "homepage": "https://github.com/smilexx/yandex-metrica-ab-next",
   "bugs": {
-    "url": "https://github.com/Firnis/yandex-metrica-ab-react/issues"
+    "url": "https://github.com/smilexx/yandex-metrica-ab-next/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Firnis/yandex-metrica-ab-react"
+    "url": "https://github.com/smilexx/yandex-metrica-ab-next"
   },
   "files": [
     "./dist/index.js",
