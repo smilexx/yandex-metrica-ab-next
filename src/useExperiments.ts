@@ -16,12 +16,16 @@ export const useExperiments = (params: UseExperiments) => {
     useEffect(() => {
         createSnippet();
 
-        window.ymab(clientId, "init", param, clientFeatures, (data) => {
-            setData({
-                ...data,
-                ready: true,
+        if (clientId) {
+            window.ymab(clientId, "init", param, clientFeatures, (data) => {
+                setData({
+                    ...data,
+                    ready: true,
+                });
             });
-        });
+        } else {
+            console.error('[Yandex Experiments]: client not set')
+        }
     }, [clientId, param, clientFeatures]);
 
     return data;
